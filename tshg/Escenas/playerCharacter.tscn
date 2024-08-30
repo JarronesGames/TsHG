@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4xgt12ouec7k"]
+
+[ext_resource type="Script" path="res://Scripts/playerCharacter.gd" id="1_yj6at"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krlr7"]
+radius = 0.566317
+height = 2.21486
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_yj6at")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.938765, 0)
+shape = SubResource("CapsuleShape3D_krlr7")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
